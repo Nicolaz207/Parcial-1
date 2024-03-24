@@ -1,0 +1,14 @@
+int square_digits(int num) {
+    std::stringstream result_stream;
+    std::string num_str = std::to_string(num);
+
+    for (char digit : num_str) {
+        int digit_value = digit - '0'; 
+        result_stream << digit_value * digit_value;
+    }
+
+    int result;
+    result_stream >> result;
+
+    return result;
+}
